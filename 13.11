@@ -1,0 +1,31 @@
+def A(name):
+    lib = []
+    file = open('hfdy')
+    for line in file:
+        avtor, title, year = line.split()
+        avtor = avtor[:-1]
+        title = title[:-1]
+        print(avtor, title, year)
+        if name == avtor and year == '1960':
+            lib.append(title)
+    return lib
+t = A('b')
+print(t)
+    file.close()
+
+def B(name):
+    lib = []
+    file = open('hfdy')
+    for line in file:
+        avtor, title, year = line.split()
+        avtor = avtor[:-1]
+        title = title[:-1]
+        print(avtor, title, year)
+        if name == title:
+            t = (avtor, year)
+            lib.append(t)
+    return lib
+l = B('id')
+for item in l:
+    print(*item)
+    file.close()
