@@ -1,0 +1,9 @@
+file = open('Lk12.txt', 'r')
+s = file.read()
+numbers = s.split()
+for i in range(len(numbers)):
+    numbers[i] = float(numbers[i])
+d = numbers[::2]
+k = min(d)
+print(k)
+file.close()
